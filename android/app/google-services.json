@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "139907598045",
+    "project_id": "pattubook-f0176",
+    "storage_bucket": "pattubook-f0176.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139907598045:android:799b9d401bcbac47e3bd34",
+        "android_client_info": {
+          "package_name": "com.example.shopzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139907598045-hvkac5g7o854u6e75cubif4sc5ogdhao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-Pdv-37PRPZOYdKwDbunJlAsNE_Cn9kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139907598045-hvkac5g7o854u6e75cubif4sc5ogdhao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
