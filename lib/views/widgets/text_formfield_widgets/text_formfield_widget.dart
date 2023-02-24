@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../pages/otp_entry_screen/country_code_picker/country_code_picker.dart';
 
 class TextFormFieldWidget extends StatelessWidget {

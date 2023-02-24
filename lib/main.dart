@@ -1,12 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shopzy/services/firebase_auth_repository/authentication_repository.dart';
 import 'package:shopzy/views/pages/dashboard/dashboard.dart';
 import 'package:shopzy/views/pages/login_details_screen/login_details.dart';
 import 'package:shopzy/views/pages/on_boariding_screen/on_boarding_screen.dart';
-import 'package:shopzy/views/pages/otp_screen/otp_screen.dart';
 import 'package:shopzy/views/pages/sign_up_details/sign_up_details.dart';
 import 'package:shopzy/views/widgets/theme/theme.dart';
 import 'views/pages/otp_entry_screen/otp_entry_screen.dart';
@@ -14,6 +15,8 @@ import 'views/pages/otp_entry_screen/otp_entry_screen.dart';
 int? initScreen;
 
 Future<void> main() async {
+  await Hive.initFlutter();
+  await Hive.openBox('money');
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp()
       .then((value) => Get.put(AuthenticationRepository()));
