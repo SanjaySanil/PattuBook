@@ -1,13 +1,12 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:shopzy/main.dart';
-import 'package:shopzy/models/user_model.dart';
 import 'package:shopzy/services/firebase_auth_repository/authentication_repository.dart';
 import 'package:shopzy/services/user_repository/user_repository.dart';
 
 class SignUpController extends GetxController {
   static SignUpController get instance=> Get.find();
-  final userRepos=Get.put(UserRepository());
+  // final userRepos=Get.put(UserRepository());
   RxBool buttonPressed = true.obs;
   RxBool passwordHint=false.obs;
 
@@ -19,10 +18,10 @@ class SignUpController extends GetxController {
     });
   }
 
-  void registerUser(String email,String password,UserModel user )async{
+  void registerUser(String email,String password)async{
    final value= AuthenticationRepository.instance.createUserWithEmailPassword(email, password);
    if(AuthenticationRepository.firebaseUser.value!=null){
-     await userRepos.createUser(user);
+     // await userRepos.createUser(user);
      Get.toNamed(Routes.dashBoard);
    }
     }

@@ -10,6 +10,7 @@ class AddTransactions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(),
       body: Obx(
         () => ListView(
@@ -113,15 +114,16 @@ class AddTransactions extends StatelessWidget {
             SizedBox(
               height: 50,
               child: ElevatedButton(
-                onPressed: () {
+                onPressed: () async{
                   if (DashboardController.instance.amount.value != null &&
                       DashboardController.instance.note.value.isNotEmpty) {
                     final hiveDb = HiveDb();
-                    hiveDb.addData(
+                   await hiveDb.addData(
                         DashboardController.instance.amount.value,
                         DashboardController.instance.selectedDate.value,
                         DashboardController.instance.note.value,
                         DashboardController.instance.type.value);
+                   Navigator.pop(context);
                   } else {
                     print("Not all values added");
                   }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shopzy/controller/sign_up_controller/sign_up_controller.dart';
 import 'package:shopzy/main.dart';
-import 'package:shopzy/models/user_model.dart';
 import 'sign_in_text_form_field/sign_in_text_form_field.dart';
 
 class SignupDetails extends StatelessWidget {
@@ -167,12 +166,12 @@ class SignupDetails extends StatelessWidget {
                           _formKey1.currentState!.validate() &&
                           _formKey2.currentState!.validate() &&
                           _formKey3.currentState!.validate()) {
-                        final user = UserModel(
-                            phoneNo: controller2.text.trim(),
-                            email: controller1.text.trim(),
-                            fullName: controller.text.trim(),
-                            password: controller3.text.trim());
-                        SignUpController.instance.registerUser(controller1.text.trim(),controller3.text.trim(),user);
+                        // final user = UserModel(
+                        //     phoneNo: controller2.text.trim(),
+                        //     email: controller1.text.trim(),
+                        //     fullName: controller.text.trim(),
+                        //     password: controller3.text.trim());
+                        // SignUpController.instance.registerUser(controller1.text.trim(),controller3.text.trim(),user);
                       }
                     },
                     child: const Text("Sign Up"),
